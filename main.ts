@@ -1,20 +1,24 @@
-input.onButtonPressed(Button.A, function () {
-    // radio.send_string("Ninja")
-    radio.sendString("" + convertToText(0) + "," + "My Name")
-})
-radio.onReceivedString(function (receivedString) {
-    msg = _py.py_string_split(receivedString, ",")
-katakana.setScrollTime(200)
-    if (msg[0] == "0") {
-        basic.showString("" + (msg[1]))
+radio.onReceivedNumber(function (receivedNumber) {
+    if (receivedNumber == 0) {
+        basic.showIcon(IconNames.Heart)
+    } else if (receivedNumber == 1) {
+        basic.showIcon(IconNames.SmallHeart)
+    } else if (receivedNumber == 2) {
+        basic.showIcon(IconNames.Happy)
+    } else if (receivedNumber == 3) {
+        basic.showIcon(IconNames.Sad)
     } else {
-        katakana.showString(msg[1])
+        basic.showIcon(IconNames.Surprised)
     }
-    basic.pause(500)
     basic.clearScreen()
 })
-input.onButtonPressed(Button.B, function () {
-    radio.sendString("" + convertToText(1) + "," + "ｺﾝﾆﾁﾜ")
+input.onButtonPressed(Button.A, function () {
+    radio.sendNumber(2)
 })
-let msg : string[] = []
+input.onButtonPressed(Button.AB, function () {
+    radio.sendNumber(4)
+})
+input.onButtonPressed(Button.B, function () {
+    radio.sendNumber(3)
+})
 radio.setGroup(1)
