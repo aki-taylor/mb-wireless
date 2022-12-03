@@ -1,5 +1,5 @@
 {
-    "name": "Wireless",
+    "name": "wireless",
     "description": "",
     "dependencies": {
         "core": "*",
