@@ -16,4 +16,3 @@ input.onButtonPressed(Button.B, function () {
     radio.sendString("" + convertToText(1) + "," + "ｺﾝﾆﾁﾜ")
 })
 let msg : string[] = []
-radio.setGroup(1)
