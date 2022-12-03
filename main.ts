@@ -1,4 +1,5 @@
 input.onButtonPressed(Button.A, function () {
+    // radio.send_string("Ninja")
     radio.sendString("" + convertToText(0) + "," + "My Name")
 })
 radio.onReceivedString(function (receivedString) {
@@ -16,3 +17,4 @@ input.onButtonPressed(Button.B, function () {
     radio.sendString("" + convertToText(1) + "," + "ｺﾝﾆﾁﾜ")
 })
 let msg : string[] = []
+radio.setGroup(1)

@@ -1,7 +1,5 @@
-msg: List[str] = []
-radio.set_group(1)
-
 def on_button_pressed_a():
+    # radio.send_string("Ninja")
     radio.send_string("" + convert_to_text(0) + "," + "My Name")
 input.on_button_pressed(Button.A, on_button_pressed_a)
 
@@ -20,3 +18,6 @@ radio.on_received_string(on_received_string)
 def on_button_pressed_b():
     radio.send_string("" + convert_to_text(1) + "," + "ｺﾝﾆﾁﾜ")
 input.on_button_pressed(Button.B, on_button_pressed_b)
+
+msg: List[str] = []
+radio.set_group(1)
