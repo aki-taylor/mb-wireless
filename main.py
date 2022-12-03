@@ -1,4 +1,5 @@
 msg: List[str] = []
+radio.set_group(1)
 
 def on_button_pressed_a():
     radio.send_string("" + convert_to_text(0) + "," + "My Name")
